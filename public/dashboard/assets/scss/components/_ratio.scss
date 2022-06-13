@@ -1,0 +1,12 @@
+/*=====================
+ Image-ratio start
+==========================*/
+.ratio_asos {
+    .bg-size {
+        &:before {
+            padding-top: 127.7777778%;
+            content: "";
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/*=====================
+    Demo CSS 
+==========================*/
+
+.home {
+    &.bg-position {
+        background-position: top;
+    }
+}
+
+.instagram {
+    position: relative;
+
+    .insta-decor {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

@@ -1,0 +1,32 @@
+/**=====================
+    Header css start
+==========================**/
+.onhover-dropdown {
+    position: relative;
+    font-size: 14px;
+
+    .onhover-show-div {
+        top: 50px;
+        position: absolute;
+        z-index: 10;
+        background-color: $white;
+        transition: all linear 0.3s;
+        min-width: 160px;
+        text-align: left;
+        box-shadow: 0px 1px 2px 0px #cacaca;
+        transform: translateY(30px);
+        opacity: 0;
+        visibility: hidden;
+        right: 0;
+        padding: 15px 20px;
+        border-radius: 0 !important;
+    }
+
+    &:hover {
+        .onhover-show-div {
+            opacity: 1;
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+}

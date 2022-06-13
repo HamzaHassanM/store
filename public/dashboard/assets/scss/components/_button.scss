@@ -1,0 +1,308 @@
+/*=====================
+ button css start
+==========================*/
+.btn-warning {
+    color: $white;
+
+    &:hover,
+    &.disabled {
+        color: $white;
+    }
+}
+
+.btn-primary-gradien {
+    @include btn-gradien(60, lighten($theme-color, 8%), 0%, darken($theme-color, 8%), 100%, $white);
+
+    &:focus,
+    &:active,
+    &.active {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($theme-color, 8%), 0%, darken($theme-color, 8%), 100%, $white) !important;
+
+    }
+}
+
+.btn-secondary-gradien {
+    @include btn-gradien(60, lighten($secondary-color, 8%), 0%, darken($secondary-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($secondary-color, 8%), 0%, darken($secondary-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-success-gradien {
+    @include btn-gradien(60, lighten($success-color, 8%), 0%, darken($success-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($success-color, 8%), 0%, darken($success-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-danger-gradien {
+    @include btn-gradien(60, lighten($danger-color, 8%), 0%, darken($danger-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($danger-color, 8%), 0%, darken($danger-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-warning-gradien {
+    @include btn-gradien(60, lighten($warning-color, 8%), 0%, darken($warning-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($warning-color, 8%), 0%, darken($warning-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-info-gradien {
+    @include btn-gradien(60, lighten($info-color, 8%), 0%, darken($info-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($info-color, 8%), 0%, darken($info-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-light-gradien {
+    @include btn-gradien(60, lighten($light-color, 8%), 0%, darken($light-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($light-color, 8%), 0%, darken($light-color, 8%), 100%, $white) !important;
+    }
+}
+
+.btn-dark-gradien {
+    @include btn-gradien(60, lighten($dark-color, 8%), 0%, darken($dark-color, 8%), 100%, $white);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.hover {
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($dark-color, 8%), 0%, darken($dark-color, 8%), 100%, $white) !important;
+    }
+}
+
+[class*='-gradien'] {
+    &:hover {
+        background-size: 50% 100%;
+        transition: all 0.3s ease;
+        color: $white;
+    }
+}
+
+*.btn:focus {
+    box-shadow: $btn-focus-box-shadow !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn {
+    font-size: $btn-font-size;
+    padding: $btn-padding;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.btn-lg {
+    font-size: $btn-lg-font-size;
+}
+
+.btn-sm {
+    font-size: $btn-sm-font-size;
+}
+
+.btn-xs {
+    padding: $btn-xs-padding;
+    font-size: $btn-xs-font-size;
+}
+
+.large-btn {
+    margin-bottom: -20px;
+
+    .btn {
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+.btn-solid {
+    padding: 13px 29px;
+    color: $white;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--theme-color);
+    background-image: linear-gradient(30deg, var(--theme-color) 50%, transparent 50%);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        background-position: 100%;
+        color: $black;
+        background-color: $white;
+    }
+
+    &.black-btn {
+        background-image: linear-gradient(30deg, $dark-font 50%, transparent 50%);
+        border: 2px solid $dark-font;
+    }
+
+    &:focus {
+        color: $black;
+    }
+
+    &.btn-sm {
+        padding: 9px 16px;
+    }
+
+    &.btn-xs {
+        padding: 5px 8px;
+        text-transform: capitalize;
+    }
+
+    &.hover-solid {
+        transition: none;
+
+        &:hover,
+        &:focus {
+            background-color: var(--theme-color);
+            opacity: 0.92;
+            color: $white;
+            transition: none;
+        }
+    }
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 13px 29px;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--theme-color);
+    position: relative;
+    color: $black;
+
+    &:before {
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: var(--theme-color);
+        z-index: -2;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--theme-color);
+        color: $white !important;
+
+        i {
+            color: $white !important;
+        }
+
+        &:before {
+            transition: 0.5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    &.btn-sm {
+        padding: 9px 16px;
+        font-size: 12px;
+    }
+}
+
+button {
+    &.btn {
+
+        &.btn-solid,
+        &.btn-outline {
+            &:active {
+                background-image: -webkit-linear-gradient(30deg, var(--theme-color) 50%, transparent 50%);
+                background-image: linear-gradient(30deg, var(--theme-color) 50%, transparent 50%);
+                color: $white;
+                background: var(--theme-color);
+            }
+        }
+    }
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--theme-color);
+    transition: all 0.5s ease;
+    padding: 10px 29px;
+
+    &:hover {
+        color: $black;
+        transition: all 0.5s ease;
+    }
+}
+
+.btn-close {
+    background: none;
+}

@@ -1,0 +1,189 @@
+/**=====================
+     Reset css start
+==========================**/
+section,
+.section-t-space {
+    padding-top: 70px;
+}
+
+.section-b-space {
+    padding-bottom: 70px;
+}
+
+.table {
+    thead {
+        th {
+            border-bottom: 1px solid #dee2e6 !important;
+        }
+    }
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.small-section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.bg-light0 {
+    background-color: $light-grey;
+}
+
+.bg-light1 {
+    background-color: $pink;
+}
+
+.bg-light2 {
+    background-color: $blue;
+}
+
+.bg-loader {
+    background-color: $bg-loader;
+}
+
+.badge-theme-color {
+    background-color: var(--theme-color);
+    color: white;
+}
+
+.badge-grey-color {
+    background-color: #929292;
+    color: white;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+del {
+    font-size: 14px;
+    color: $font-grey;
+    font-weight: 400;
+}
+
+.position-unset {
+    position: unset !important;
+}
+
+[data-notify="progressbar"] {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.progress-bar {
+    background-color: #19a340;
+}
+
+.progress-bar-info {
+    background-color: #00829a;
+}
+
+.container-fluid {
+    &.custom-container {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+.left-sidebar_space {
+    padding-left: 300px;
+}
+
+.space_sm {
+    padding-left: 240px;
+    padding-top: 74px !important;
+}
+
+.left-sidebar_space-xl {
+    padding-left: 380px;
+}
+
+.background-transparent {
+    background-color: transparent !important;
+}
+
+.bg-overlay {
+    background-blend-mode: overlay;
+    background-color: rgba(#fafafa, 0.98);
+}
+
+.bg-blue-light {
+    background-color: rgba(#2873ef, 0.06);
+}
+
+.bg-theme {
+    background-color: var(--theme-color);
+    background-color: var(--theme-color2);
+}
+
+/*Lazy load */
+
+.blur-up {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+
+    &.lazyloaded {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-check-input {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+
+    .media-body {
+        flex: 1;
+    }
+}
+
+.form-check {
+    display: flex;
+}
+
+.breadcrumb {
+    padding: 0.75rem 1rem;
+}
+
+.row {
+
+    div[class*="col-"],
+    .col {
+        position: relative;
+    }
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.txt-dark {
+    color: $theme-font-color !important;
+}
+
+.txt-success {
+    color: $success-color !important;
+}
+
+.txt-danger {
+    color: $danger-color !important;
+}

@@ -1,0 +1,281 @@
+.irs {
+	position: relative;
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	height: 55px;
+}
+.irs-line {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	outline: none !important;
+	height: 10px;
+	top: 30px;
+	background: #ececec;
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+}
+.irs-line-left {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 11%;
+	height: 8px;
+}
+.irs-line-mid {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 9%;
+	width: 82%;
+	height: 8px;
+}
+.irs-line-right {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 11%;
+	height: 8px;
+}
+.irs-bar {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 0;
+	height: 4px;
+	top: 33px;
+	background: red;
+}
+.irs-bar-edge {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	height: 10px;
+	top: 33px;
+	width: 14px;
+	border: 1px solid #428bca;
+	border-right: 0;
+	background: #428bca;
+	background: -webkit-gradient(linear, left bottom, left top, from(#428bca), to(#7fc3e8));
+	background: linear-gradient(to top, #428bca 0%, #7fc3e8 100%);
+	border-radius: 16px 0 0 16px;
+	-moz-border-radius: 16px 0 0 16px;
+}
+.irs-shadow {
+	position: absolute;
+	display: none;
+	left: 0;
+	width: 0;
+	height: 2px;
+	top: 38px;
+	background: #000;
+	opacity: 0.3;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.irs-slider {
+	position: absolute;
+	display: block;
+	cursor: default;
+	z-index: 1;
+	top: 30px;
+	width: 8px;
+	height: 12px;
+	background: red;
+	border-radius: 27px;
+	cursor: pointer;
+}
+.irs-slider.type_last {
+	z-index: 2;
+}
+.irs-min {
+	position: absolute;
+	display: block;
+	left: 0;
+	cursor: default;
+	display: none;
+	color: #333;
+	font-size: 12px;
+	line-height: 1.333;
+	text-shadow: none;
+	top: 0;
+	padding: 1px 5px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.irs-max {
+	position: absolute;
+	display: block;
+	right: 0;
+	cursor: default;
+	display: none;
+	color: #333;
+	font-size: 12px;
+	line-height: 1.333;
+	text-shadow: none;
+	top: 0;
+	padding: 1px 5px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.irs-from {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	cursor: default;
+	white-space: nowrap;
+	color: black;
+	font-size: 12px;
+	line-height: 1.333;
+	text-shadow: none;
+	padding: 1px 5px;
+	background: transparent;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: 700;
+}
+.irs-to {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	cursor: default;
+	white-space: nowrap;
+	color: black;
+	font-size: 12px;
+	line-height: 1.333;
+	text-shadow: none;
+	padding: 1px 5px;
+	background: transparent;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: 700;
+	background-color: red;
+	color: white;
+	padding: 3px;
+}
+.irs-single {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	cursor: default;
+	white-space: nowrap;
+	color: black;
+	font-size: 12px;
+	line-height: 1.333;
+	text-shadow: none;
+	padding: 1px 5px;
+	background: transparent;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: 700;
+}
+.irs-grid {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	height: 27px;
+}
+.irs-with-grid {
+	height: 75px;
+	.irs-grid {
+		display: block;
+	}
+}
+.irs-grid-pol {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 8px;
+	background: #000;
+	opacity: 0.5;
+	background: #428bca;
+}
+.irs-grid-pol.small {
+	height: 4px;
+	background: #999;
+}
+.irs-grid-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 9px;
+	line-height: 9px;
+	padding: 0 3px;
+	color: #000;
+	bottom: 5px;
+	color: #99a4ac;
+}
+.irs-disable-mask {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: -1%;
+	width: 102%;
+	height: 100%;
+	cursor: default;
+	background: rgba(0, 0, 0, 0);
+	z-index: 2;
+}
+.lt-ie9 {
+	.irs-disable-mask {
+		background: #000;
+		filter: alpha(opacity=0);
+		cursor: not-allowed;
+	}
+	.irs-shadow {
+		filter: alpha(opacity=30);
+	}
+	.irs-min {
+		background: #ccc;
+	}
+	.irs-max {
+		background: #ccc;
+	}
+	.irs-from {
+		background: #999;
+	}
+	.irs-to {
+		background: #999;
+	}
+	.irs-single {
+		background: #999;
+	}
+}
+.irs-disabled {
+	opacity: 0.4;
+}
+.irs-hidden-input {
+	position: absolute !important;
+	display: block !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	outline: none !important;
+	z-index: -9999 !important;
+	background: none !important;
+	border-style: solid !important;
+	border-color: transparent !important;
+}

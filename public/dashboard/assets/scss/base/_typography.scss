@@ -1,0 +1,200 @@
+/**=====================
+    Typography css start
+==========================**/
+
+body {
+    font-family: $font_0, $font_1;
+    position: relative;
+    background: $white;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 60px;
+    color: $dark-font;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+        font-size: 107px;
+        font-weight: 700;
+        color: var(--theme-color);
+    }
+}
+
+h2 {
+    font-size: 36px;
+    color: $dark-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: $grey;
+    letter-spacing: 0.03em;
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-font;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: $grey;
+    line-height: 24px;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+p {
+    font-size: 14px;
+    color: $grey;
+    line-height: 1;
+}
+
+a {
+    transition: 0.5s ease;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        transition: 0.5s ease;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-close {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+:focus {
+    outline: none;
+}
+
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.text-theme {
+    color: var(--theme-color) !important;
+}
+
+.form-check-input {
+    &:checked {
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
+    }
+}
+
+body {
+    background-color: $body-bg-color;
+    font-size: $body-font-size;
+    overflow-x: hidden;
+    font-family: $font-work-sans, $font-serif;
+    color: $theme-body-font-color;
+}
+
+ul {
+    padding-left: $ul-padding-left;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-right: $ul-padding-right;
+}
+
+* a {
+    color: $theme-color;
+}
+
+p {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    letter-spacing: $paragraph-letter-spacing;
+}
+
+code {
+    color: $code-tag-color !important;
+    background-color: $code-tag-bg-color;
+    padding: $code-tag-padding;
+    margin: $code-tag-margin;
+    border-radius: $code-tag-border-radious;
+}
+
+blockquote {
+    border-left: $blockquote-border;
+    padding: $blockquote-padding;
+}
+
+blockquote {
+    &.text-center {
+        border: none;
+        padding: $blockquote-padding;
+    }
+}
+
+blockquote {
+    &.text-end {
+        border-left: none;
+        border-right: $blockquote-border;
+        padding: $blockquote-padding;
+    }
+}
+
+:focus {
+    outline-color: $all-focus-outline-color;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+svg {
+    vertical-align: baseline;
+}
+
+input {
+    &:focus {
+        outline-color: $transparent-color;
+    }
+}

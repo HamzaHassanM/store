@@ -1,0 +1,35 @@
+.theme-color {
+    --theme-color: #ff4c3b;
+}
+
+// utils
+@import "utils/variables";
+@import "utils/mixins";
+
+//base
+@import "base/typography";
+@import "base/reset";
+
+// components
+@import "components/animation";
+@import "components/button";
+@import "components/ratio";
+@import "components/timer";
+
+//layout
+@import "layout/category";
+@import "layout/demo";
+@import "layout/header";
+@import "layout/other";
+@import "layout/product-box";
+@import "layout/table";
+
+//pages
+@import "pages/inner-page";
+@import "pages/login";
+
+// themes
+@import "themes/dark";
+@import 'themes/admin_style';
+@import "themes/responsive";
+@import "themes/rtl";

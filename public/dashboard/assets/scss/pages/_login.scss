@@ -1,0 +1,531 @@
+/**=====================
+    Log In And Sign up CSS Start
+==========================**/
+.login-section {
+  min-height: 100vh;
+  position: relative;
+  background: #f0f3f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(30px + (50 - 10) * ((100vw - 320px) / (1920 - 320)));
+
+  .materialContainer {
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+
+    .box {
+      position: relative;
+      top: 0;
+      opacity: 1;
+      float: left;
+      padding: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320))) calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
+      width: 100%;
+      background: $white;
+      border-radius: 10px;
+      transform: scale(1);
+      z-index: 5;
+
+      &.back {
+        transform: scale(0.95);
+        top: -20px;
+        opacity: 0.8;
+        z-index: -1;
+      }
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: -10px;
+        background-color: rgba($white, $alpha: 0.6);
+        left: 0;
+        transform: scale(0.95);
+      }
+    }
+
+    .login-title {
+      width: 100%;
+      line-height: 46px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: calc(0px + (2 - 0) * ((100vw - 320px) / (1920 - 320)));
+      color: var(--theme-color);
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(-10px + (-10 - 10) * ((100vw - 320px) / (1920 - 320)));
+        background: var(--theme-color);
+      }
+
+      h2 {
+        font-size: calc(27px + (28 - 27) * ((100vw - 320px) / (1920 - 320)));
+        margin-left: calc(10px + (0 - 10) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: -2px;
+      }
+    }
+
+    .social-media {
+      padding: 15px calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
+      border-radius: 0.25rem;
+      box-shadow: 0 0 10px rgba($gray, $alpha: 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h6 {
+        margin-left: 20px;
+        margin-bottom: -2px;
+        color: $white;
+      }
+
+      img {
+        width: calc(8% + (18 - 8) * ((100vw - 320px) / (1920 - 320)));
+      }
+
+      &.fb-media {
+        background-color: #43609c;
+
+        h6 {
+          color: $white;
+          font-size: 18px;
+        }
+      }
+
+      &.google-media {
+        color: $black;
+
+        h6 {
+          font-size: 18px;
+          color: $black;
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+      float: left;
+      text-align: center;
+      color: rgba($black1, $alpha: 0.4);
+      font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+      margin-top: calc(17px + (23 - 17) * ((100vw - 320px) / (1920 - 320)));
+      margin-bottom: 0;
+
+      &.pass-or {
+        margin-top: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+
+    .input {
+      transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      label,
+      input,
+      .spin {
+        transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+
+    .button {
+      transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      button {
+        .button {
+          &.login {
+            button {
+              i {
+                &.fas {
+                  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .material-button .shape {
+
+      &:before,
+      &:after {
+        transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+
+    .button.login button {
+      transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .material-button,
+    .alt-2,
+    .material-button .shape,
+    .alt-2 .shape,
+    .box {
+      transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .input {
+      width: 100%;
+      float: left;
+
+      label,
+      input,
+      .spin {
+        width: 100%;
+        float: left;
+      }
+    }
+
+    .button {
+      width: 100%;
+      float: left;
+
+      button {
+        width: 100%;
+        float: left;
+      }
+    }
+
+    .input {
+      margin-top: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+      height: 70px;
+    }
+
+    .input {
+      position: relative;
+
+      input {
+        position: relative;
+      }
+    }
+
+    .button {
+      position: relative;
+
+      button {
+        position: relative;
+      }
+    }
+
+    .input {
+      input {
+        height: 60px;
+        top: 10px;
+        border: none;
+        background: transparent;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        color: $black1;
+        font-weight: 300;
+      }
+
+      label {
+        font-family: "Roboto", sans-serif;
+        font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 300;
+
+        &.email-label {
+          font-size: calc(15px + (24 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+      }
+    }
+
+    .button {
+      button {
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        color: rgba($black1, $alpha: 0.8);
+        font-weight: 300;
+      }
+    }
+
+    .input {
+
+      &:before,
+      .spin {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:before {
+        content: "";
+        background: rgba($black1, $alpha: 0.15);
+        z-index: 3;
+      }
+
+      .spin {
+        background: var(--theme-color);
+        z-index: 4;
+        width: 0;
+      }
+    }
+
+    .overbox .input {
+      .spin {
+        background: rgba($white, 1);
+      }
+
+      &:before {
+        background: rgba($white, 0.5);
+      }
+    }
+
+    .input {
+      label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        line-height: 60px;
+        color: #777;
+
+        &:focus-visible {
+          border: none;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+      margin: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) 0;
+      overflow: hidden;
+      z-index: 2;
+
+      &.button-1 {
+        margin-bottom: 0;
+      }
+
+      &.login {
+        button {
+          width: 100%;
+          left: 0%;
+          background-color: var(--theme-color);
+          border: 1px solid var(--theme-color);
+          font-size: 18px;
+          color: $white;
+          padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
+          border-radius: 4px;
+
+          span {
+            display: block;
+            margin-top: -3px;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        left: 0%;
+        background-color: transparent;
+        border: 1px solid rgba($black1, $alpha: 0.1);
+        font-size: 18px;
+        color: rgba($black1, $alpha: 0.2);
+        padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
+      }
+
+      button {
+        background-color: $white;
+        color: var(--theme-color);
+        border: none;
+      }
+
+      &.login button {
+        &.active {
+          border: 1px solid transparent;
+          color: $white !important;
+          background-color: var(--theme-color);
+
+          span {
+            opacity: 0;
+            transform: scale(0);
+            display: none;
+          }
+
+          i {
+            &.fas {
+              opacity: 1;
+              transform: scale(1) rotate(-0deg);
+              display: block;
+            }
+          }
+        }
+
+        i {
+          &.fas {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 18px;
+            transform: scale(0) rotate(-45deg);
+            display: none;
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .pass-forgot {
+      width: 100%;
+      float: right;
+      text-align: right;
+      color: rgba($black1, $alpha: 0.4);
+      font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+      margin: 10px auto 0;
+
+      &:hover {
+        color: var(--theme-color);
+      }
+    }
+
+    .sign-category {
+      width: 100%;
+      text-align: center;
+      color: rgba($black1, $alpha: 0.4);
+      font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
+      margin: 10px auto;
+      position: relative;
+
+      span {
+        background-color: $white;
+        z-index: 1;
+        padding: 0 12px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        color: rgba($black1, $alpha: 0.2);
+        z-index: -1;
+        background-color: rgba($black1, $alpha: 0.2);
+      }
+    }
+
+    .overbox {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: inherit;
+      border-radius: 10px;
+      padding: 60px 50px 40px 50px;
+
+      .login-title,
+      .button,
+      .input {
+        z-index: 111;
+        position: relative;
+        color: $white !important;
+        display: none;
+      }
+
+      .login-title {
+        width: 80%;
+      }
+
+      .input {
+        margin-top: 20px;
+
+        input,
+        label {
+          color: $white
+        }
+      }
+
+      .material-button,
+      .alt-2 {
+        display: block;
+
+        .shape {
+          display: block;
+        }
+      }
+    }
+
+    .material-button,
+    .alt-2 {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--theme-color);
+      position: absolute;
+      top: 40px;
+      right: -70px;
+      cursor: pointer;
+      z-index: 100;
+      transform: translate(0%, 0%);
+    }
+
+    .material-button .shape,
+    .alt-2 .shape {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .material-button .shape:before,
+    .alt-2 .shape:before,
+    .material-button .shape:after,
+    .alt-2 .shape:after {
+      content: "";
+      background: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    .material-button .shape:before,
+    .alt-2 .shape:before {
+      width: 25px;
+      height: 4px;
+    }
+
+    .material-button .shape:after,
+    .alt-2 .shape:after {
+      height: 25px;
+      width: 4px;
+    }
+
+    .material-button.active,
+    .alt-2.active {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%) rotate(0deg);
+    }
+  }
+}
+
+/**=====================
+    Log In And Sign up CSS Ends
+==========================**/

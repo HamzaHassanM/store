@@ -1,0 +1,32 @@
+/**=====================
+    Timer css start
+==========================**/
+.timer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    margin-top: 30px;
+    background-color: $grey-dark;
+    display: inline-block;
+
+    p {
+        font-size: 18px;
+        color: $white;
+        margin-bottom: 0;
+    }
+
+    span {
+        width: 70px;
+        display: inline-block;
+
+        .timer-cal {
+            font-size: 12px;
+            color: $grey;
+        }
+
+        .padding-l {
+            padding-left: 22px;
+            display: inline;
+        }
+    }
+}

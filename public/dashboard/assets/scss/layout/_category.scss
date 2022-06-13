@@ -1,0 +1,52 @@
+/**=====================
+    category css start
+==========================**/
+
+.background {
+    background-color: $border-grey;
+    padding: 20px 10px;
+    margin: 0;
+
+    .contain-bg {
+        width: 100%;
+        background-color: $white;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        text-align: center;
+        transition: all 0.5s ease;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--theme-color);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        h4 {
+            color: $dark-font;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0;
+            transition: all 0.5s ease;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 0.07;
+                transition: all 0.5s ease;
+            }
+
+            h4 {
+                color: var(--theme-color);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
