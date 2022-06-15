@@ -44,7 +44,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('dashboard') }}/assets/css/style.css">
 </head>
 
-<body>
+<body class="rtl">
 
     <!-- page-wrapper Start-->
     <div class="page-wrapper">
@@ -274,7 +274,7 @@
     <script src="{{ asset('dashboard') }}/assets/js/chart/sparkline/sparkline.js"></script>
 
     <!--Customizer admin-->
-    <script src="{{ asset('dashboard') }}/assets/js/admin-customizer.js"></script>
+    {{-- <script src="{{ asset('dashboard') }}/assets/js/admin-customizer.js"></script> --}}
 
     <!--dashboard custom js-->
     <script src="{{ asset('dashboard') }}/assets/js/dashboard/default.js"></script>
