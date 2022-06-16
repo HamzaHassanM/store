@@ -32,8 +32,6 @@ class AppServiceProvider extends ServiceProvider
                  'description' => 'Laravel'
              ]);
           });
-  
-  
           view()->share('setting', $setting);
         }
     }
