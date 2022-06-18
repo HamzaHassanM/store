@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Category;
 use App\Repositorties\CategoryRepository;
+use App\Utils\DatatableService;
 use App\Utils\ImageUpload;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -56,7 +57,7 @@ class CategoryService
 
     public function datatable()
     {
-        $query = Category::select('*')->with('parent');
+        $query = $this->categoryRepository->baseQuery(['parent']);
         return  DataTables::of($query)
             ->addIndexColumn()
             ->addColumn('action', function ($row) {
@@ -72,8 +73,6 @@ class CategoryService
                     return $row->parent->name;
                 }
                 return 'قسم رئيسي';
-
-                // return ($row->parent ==  0) ? 'قسم رئيسي' :   $row->parents->name;
             })
 
             ->addColumn('image', function ($row) {
