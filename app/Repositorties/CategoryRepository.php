@@ -4,9 +4,8 @@ namespace App\Repositorties;
 
 use App\Models\Category;
 
-class CategoryRepository
+class CategoryRepository implements RepositoryInterface
 {
-
     public $category;
     public  function __construct(Category $category)
     {

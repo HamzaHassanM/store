@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\IndexController;
+use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\SettingController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,5 @@ Route::group(['as' => 'dashboard.'], function () {
     Route::get('categories/ajax',[CategoryController::class , 'getall'])->name('categories.getall');
     Route::delete('categories/delete',[CategoryController::class , 'delete'])->name('categories.delete');
     Route::resource('categories', CategoryController::class)->except('destroy','create' , 'show');
+    Route::resource('products', ProductController::class)->except('show');
 });
