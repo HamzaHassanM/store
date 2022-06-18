@@ -22,7 +22,7 @@ class SettingController extends Controller
     {
         $setting->update($request->validated());
         if($request->has('logo')){
-            $logo = ImageUpload::uploadImage($request->logo , 100 , 200 , 'logo/');
+            $logo = ImageUpload::uploadImage($request->logo , null , null , 'logo/');
             $setting->update(['logo' => $logo]);
         }
         if($request->has('favicon')){

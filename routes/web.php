@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard.settings.index');
+    return view('dashboard.categories.edit');
 })->name('index');
 
 Auth::routes();
