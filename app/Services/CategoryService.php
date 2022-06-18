@@ -3,16 +3,21 @@
 namespace App\Services;
 
 use App\Models\Category;
+use App\Repositorties\CategoryRepository;
 use App\Utils\ImageUpload;
 use Yajra\DataTables\Facades\DataTables;
 
 class CategoryService
 {
-
+    public $categoryRepository;
+    public function __construct(CategoryRepository $repo)
+    {
+        $this->categoryRepository = $repo;
+    }
 
     public function getMainCategories()
     {
-        return Category::where('parent_id', 0)->orWhere('parent_id', null)->get();
+        return $this->categoryRepository->getMainCategories();
     }
 
 
@@ -23,32 +28,31 @@ class CategoryService
             $params['image'] = ImageUpload::uploadImage($params['image']);
         }
 
-        return  Category::create($params);
+        
+        return  $this->categoryRepository->store($params);
     }
 
 
     public function getById($id, $childrenCount = false)
     {
-        $query =  Category::where('id', $id);
-        if($childrenCount){
-            $query->withCount('child');
-        }
-        return $query->firstOrFail();
+        return $this->categoryRepository->getbyId($id, $childrenCount);
     }
 
-    public function update($id,$params)
+    public function update($id, $params)
     {
-        $category = $this->getById($id);
+        $category = $this->categoryRepository->getById($id);
         $params['parent_id'] = $params['parent_id'] ?? 0;
         if (isset($params['image'])) {
             $params['image'] = ImageUpload::uploadImage($params['image']);
         }
-
-        return  $category->update($params);
+        return  $this->categoryRepository->update($category, $params);
     }
 
 
-
+    public function delete($params)
+    {
+        $this->categoryRepository->delete($params);
+    }
 
     public function datatable()
     {

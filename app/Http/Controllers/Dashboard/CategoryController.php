@@ -60,7 +60,7 @@ class CategoryController extends Controller
 
     public function delete(CategoryDeleteRequest $request)
     {
-     Category::whereId($request->id)->delete();
-     return redirect()->route('dashboard.categories.index');
+        $this->categoryService->delete($request->validated());
+        return redirect()->route('dashboard.categories.index');
     }
 }

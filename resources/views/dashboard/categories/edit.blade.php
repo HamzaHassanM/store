@@ -68,7 +68,9 @@
                                             <select name="parent_id" id="" class="form-control">
                                                 <option value="" @if ($category->parent_id == null) selected @endif>قسم رئيسي</option>
                                                 @foreach ($mainCategories as $item)
-                                                    <option value="{{ $category->id }}"  @if ($item->id == $category->parent_id) selected @endif>{{ $item->name }}</option>
+                                                @if($item->id != $category->id)
+                                                    <option value="{{ $item->id }}"  @if ($item->id == $category->parent_id) selected @endif>{{ $item->name }}</option>
+                                                    @endif
                                                 @endforeach
                                             </select>
                                         </div>
