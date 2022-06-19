@@ -4,6 +4,7 @@ namespace App\Repositorties;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductColor;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductRepository implements RepositoryInterface
@@ -15,10 +16,13 @@ class ProductRepository implements RepositoryInterface
         $this->product = $product;
     }
 
-    public function baseQuery($relations=[])
+    public function baseQuery($relations=[],$withCount=[])
     {
         $query = $this->product->select('*')->with($relations);
-        return $query;
+        foreach ($withCount as $key => $value) {
+           $query->withCount($value);
+        }
+       return $query;
     }
 
     public function getbyId($id)
@@ -30,6 +34,11 @@ class ProductRepository implements RepositoryInterface
     public function store($params)
     {
         return $this->product->create($params);
+    }
+
+    public function addColor($product, $params)
+    {
+        $product->productColor()->createMany($params['colors']);
     }
 
 

@@ -28,8 +28,6 @@ class CategoryService
         if (isset($params['image'])) {
             $params['image'] = ImageUpload::uploadImage($params['image']);
         }
-
-        
         return  $this->categoryRepository->store($params);
     }
 
@@ -81,5 +79,11 @@ class CategoryService
 
             ->rawColumns(['parent', 'action', 'image'])
             ->make(true);
+    }
+
+
+    public function getAll()
+    {
+        return $this->categoryRepository->baseQuery(['child'])->get();
     }
 }

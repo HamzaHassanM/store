@@ -14,8 +14,7 @@ class CategoryRepository implements RepositoryInterface
 
     public function baseQuery($relations=[])
     {
-        $query = $this->category->select('*')->with($relations);
-        return $query;
+        return $this->category->select('*')->with($relations);
     }
 
 
