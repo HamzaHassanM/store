@@ -21,32 +21,41 @@ class ProductService
 
     public function getById($id)
     {
-        return $this->productRepository->getById($id);
+        return $this->productRepository->baseQuery([],[],['id'=>$id])->firstOrFail();
     }
 
     public function store($params)
     {   
+
         if (isset($params['image'])) {
             $params['image'] = ImageUpload::uploadImage($params['image']);
         }
-
-        $product = $this->productRepository->store($params);
-
         if (isset($params['colors'])) {
-            $params['colors'] = array_map(function($color) use ($product) {
-                $colors['color'] = $color;
-                $colors['product_id'] = $product->id;
-                return $colors;
-            }, $params['colors']);
-
-            $this->productRepository->addColor($product, ['colors' => $params['colors']]);
+          $params['color'] = implode(',' , $params['colors']);
+          unset($params['colors']);
+        }
+        if (isset($params['sizes'])) {
+            $params['size'] = implode(',' , $params['sizes']);
+            unset($params['sizes']);
         }
 
-        return $product;
+     return  $this->productRepository->store($params);
     }
 
     public function update($id, $params)
     {
+        if (isset($params['image'])) {
+            $params['image'] = ImageUpload::uploadImage($params['image']);
+        }
+        if (isset($params['colors'])) {
+          $params['color'] = implode(',' , $params['colors']);
+          unset($params['colors']);
+        }
+        if (isset($params['sizes'])) {
+            $params['size'] = implode(',' , $params['sizes']);
+            unset($params['sizes']);
+        }
+
         return $this->productRepository->update($id, $params);
     }
 
@@ -57,7 +66,7 @@ class ProductService
 
     public function datatable()
     {
-        $query = $this->productRepository->baseQuery(relations:['category'],withCount:['productColor']);
+        $query = $this->productRepository->baseQuery(relations:['category']);
         return DataTables::of($query)
             ->addColumn('action', function ($row) {
                 return $btn = '

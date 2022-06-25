@@ -63,7 +63,7 @@
                                             <th>القسم </th>
                                             <th>السعر الأساسي</th>
                                             <th>التخفيض الأساسي</th>    
-                                            <th>عدد الألوان المتوفرة</th>
+                                            <th>الالوان</th>
                                             <th></th>
 
                                         </tr>
@@ -114,8 +114,8 @@
                         name: 'discount_price'
                     },
                     {
-                        data: 'product_color_count',
-                        name: 'product_color_count'
+                        data: 'color',
+                        name: 'color'
                     },
                     {
                         data: 'action',

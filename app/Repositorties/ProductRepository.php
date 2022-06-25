@@ -16,11 +16,14 @@ class ProductRepository implements RepositoryInterface
         $this->product = $product;
     }
 
-    public function baseQuery($relations=[],$withCount=[])
+    public function baseQuery($relations=[],$withCount=[] , $where=[])
     {
         $query = $this->product->select('*')->with($relations);
         foreach ($withCount as $key => $value) {
            $query->withCount($value);
+        }
+        foreach ($where as $key => $value) {
+            $query->where($key, $value);
         }
        return $query;
     }
@@ -46,7 +49,7 @@ class ProductRepository implements RepositoryInterface
     public function update($id, $params)
     {
         $product = $this->getbyId($id);
-        return $product->update($params);
+       return  $product->update($params);
     }
 
     public function delete($params)

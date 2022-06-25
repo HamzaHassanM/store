@@ -34,6 +34,7 @@ class ProductController extends Controller
     
     public function create()
     {
+        
         $categories = $this->categoryService->getAll();
         return view('dashboard.products.create' , compact('categories'));
     }
@@ -54,13 +55,16 @@ class ProductController extends Controller
    
     public function edit($id)
     {
-        //
+        $categories = $this->categoryService->getAll();
+        $product = $this->productService->getById($id);
+       return view('dashboard.products.edit' , compact('categories', 'product'));
     }
 
    
     public function update(Request $request, $id)
     {
-        //
+       $this->productService->update($id,$request->all());
+       return redirect()->route('dashboard.products.index');
     }
 
     
