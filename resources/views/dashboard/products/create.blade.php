@@ -112,6 +112,14 @@
                                             </select>
                                         </div>
 
+                                        
+
+                                        <div class="form-group">
+                                            <label for="validationCustom05" class="col-form-label pt-0">
+                                               صور المنتج</label>
+                                            <input class="form-control dropify" id="validationCustom05" type="file"
+                                                name="images[]" multiple>
+                                        </div>
 
                                     </div>
                             </div>

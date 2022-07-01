@@ -35,6 +35,8 @@ class StoreProductRequest extends FormRequest
             'colors.*'=>'nullable|string',
             'sizes'=>'nullable|array',
             'sizes.*'=>'nullable|string',
+            'images'=>'nullable|array',
+            'images.*'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }

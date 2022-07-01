@@ -117,6 +117,15 @@
                                         </div>
 
 
+
+                                        <div class="form-group">
+                                            <label for="validationCustom05" class="col-form-label pt-0">
+                                               صور المنتج</label>
+                                            <input class="form-control dropify" id="validationCustom05" type="file"
+                                                name="images[]" multiple>
+                                        </div>
+
+
                                     </div>
 
 
@@ -127,6 +136,15 @@
 
 
                                 </form>
+
+
+
+                                @foreach($product->images as $image)
+                                    <div class="col-md-3">
+                                        <img src="{{asset($image->image)}}" alt="" class="img-fluid">
+                                        <a href=""><i class="fa fa-trash"></i></a>
+                                    </div>
+                                @endforeach
 
                             </div>
                         </div>

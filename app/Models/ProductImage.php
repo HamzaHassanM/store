@@ -10,9 +10,10 @@ class ProductImage extends Model
     use HasFactory;
     protected $fillable = ['id', 'product_id', 'image'];
     protected $table = 'product_images';
+    public $timestamps = false;
 
-    public function productColorSize()
+    public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class , 'product_id' , 'id');
     }
 }

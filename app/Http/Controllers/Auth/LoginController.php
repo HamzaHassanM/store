@@ -44,7 +44,7 @@ class LoginController extends Controller
         if (auth()->user()->type == 'admin')  {
             return '/dashboard/index';
         }
-       return  redirect()->route('index');
+       return  '/';
         
     }
 }

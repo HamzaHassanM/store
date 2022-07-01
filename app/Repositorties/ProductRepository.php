@@ -5,6 +5,8 @@ namespace App\Repositorties;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductColor;
+use App\Models\ProductImage;
+use App\Utils\ImageUpload;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductRepository implements RepositoryInterface
@@ -36,7 +38,28 @@ class ProductRepository implements RepositoryInterface
 
     public function store($params)
     {
-        return $this->product->create($params);
+        $product =  $this->product->create($params);
+        
+        $images = $this->uploadMultipleImages($params , $product);
+        $product->images()->createMany($images);
+         return $product;
+        
+    }
+
+
+    private function uploadMultipleImages($params , $product)
+    {
+        $images = [] ;
+        if (isset($params['images'])) {
+            $i = 0;
+            foreach ($params['images'] as $key => $value) {
+                $images[$i]['image'] = ImageUpload::uploadImage($value);
+                $images[$i]['product_id '] =$product->id;
+                $i++;
+            }
+         }
+
+         return $images;
     }
 
     public function addColor($product, $params)
@@ -48,8 +71,13 @@ class ProductRepository implements RepositoryInterface
 
     public function update($id, $params)
     {
+
         $product = $this->getbyId($id);
-       return  $product->update($params);
+        $product =($product->update($params));
+        $product = $this->getbyId($id);
+        $images = $this->uploadMultipleImages($params , $product);
+        $product->images()->createMany($images);
+        return $product;
     }
 
     public function delete($params)
